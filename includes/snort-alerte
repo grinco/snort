@@ -15,14 +15,15 @@
 EMAILSNORT='snort@snort.com'
 VOTREMAIL='votremail@mail.com'
 OBJET='Alerte Intrusion'
-MESSAGE='Attention une intrusion a été détectée !'
+MESSAGE='Attention intrusion detectee !'
 
-# Récupération du smtp local
+# Recuperation du smtp local
 
 SMTP=$(curl -s http://check414.free.fr/index.php/mon-smtp/ | sed -n -r 's%<b>(.*)<\/b>%\1%p' | cut -d":" -f2 | cut -d"<" -f1)
 
 # Verification des logs & envoie alerte mail
 
-if [ -e /var/log/snort/snort.log.* ] ; then
+if [ -e /var/log/snort/snort.log.* ]
+then
   sendemail -f $EMAILSNORT -t $VOTREMAIL -u $OBJET -m "$MESSAGE" -s $SMTP
 fi
