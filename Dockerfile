@@ -4,7 +4,10 @@ MAINTAINER https://oda-alexandre.github.io
 
 WORKDIR /root/
 
-COPY ./includes/snort.sh  /root/snort.sh
+RUN mkdir snort
+
+COPY ./includes/snort.sh  /root/snort/snort.sh
+COPY ./includes/snort-alerte.sh /root/snort/snort-alerte.sh
 
 RUN chmod +x snort.sh
 

@@ -45,9 +45,7 @@ POUR LA CONFIGURATION AU PREMIER DÉMARRAGE RÉPONDEZ AUX QUESTIONS.
 - 3 - 127.0.0.1 (pour surveiller seulement votre machine)
 - 4 - yes (désactivation de l'écoute sur les autres interfaces réseaux)
 - 5 - laissez vide (ajouter des commandes perso si vous en avez)
-- 6 - yes (utilisez les alertes email)
-- 7 - mail@mail.com (adresse email pour l'envois des alertes)
-- 8 - 1 (nombres de détections avant alerte)
+- 6 - no (n'utilisez pas les alertes email snort)
 
 POUR LA CONFIGURATION DES ALERTES PAR MAIL MODIFIER LE FICHIER /snort/snort-alerte.sh.
 
@@ -59,7 +57,7 @@ POUR LA CONFIGURATION DES ALERTES PAR MAIL MODIFIER LE FICHIER /snort/snort-aler
 POUR TESTER LA CONFIGURATION LANCER LA COMMANDE CI-DESSOUS ET EFFECTUEZ UN PING VERS LE CONTAINER SNORT.
 
 '''
-ping 0.0.0.0
+ping 8.8.8.8
 '''
 
 
