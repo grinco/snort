@@ -1,12 +1,12 @@
 #!/bin/sh
 
 ### BEGIN INIT INFO
-# Provides:          snort-alerte
+# Provides:          snort-alerte.sh
 # Required-Start:    $network
 # Required-Stop:     $network
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: snort-alerte
+# Short-Description: snort-alerte.sh
 # Description: alerte intrusion snort
 ### END INIT INFO
 

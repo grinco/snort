@@ -2,7 +2,7 @@
 
 if [ -e /etc/snort/snort.conf ]
 then
-  service snort restart && service snort-alerte restart && snort -A console -c /etc/snort/snort.conf
+  service snort restart && service snort-alerte.sh restart && snort -A console -c /etc/snort/snort.conf
 else
   apt-get update && apt-get install -y snort && ldconfig && service snort restart && dpkg-reconfigure snort
 fi
