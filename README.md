@@ -45,14 +45,8 @@ POUR LA CONFIGURATION AU PREMIER DÉMARRAGE RÉPONDEZ AUX QUESTIONS.
 - 3 - 127.0.0.1 (pour surveiller seulement votre machine)
 - 4 - yes (désactivation de l'écoute sur les autres interfaces réseaux)
 - 5 - laissez vide (ajouter des commandes perso si vous en avez)
-- 6 - no (n'utilisez pas les alertes email snort)
-
-POUR LA CONFIGURATION DES ALERTES PAR MAIL MODIFIER LE FICHIER /snort/snort-alerte.sh
-
-- 1 - EMAILSNORT='snort@snort.com' (email que vous donner a snort)
-- 2 - VOTREMAIL='votremail@mail.com' (email ou sont envoyer les alertes)
-- 3 - OBJET='Alerte Intrusion' (objet du mail)
-- 4 - MESSAGE='Attention une intrusion a été détectée !' (message du mail)
+- 6 - yes (activation d'alerte email snort)
+- 7 - 1 (nombre d'attaque avant alerte email snort)
 
 POUR TESTER LA CONFIGURATION LANCER LA COMMANDE CI-DESSOUS ET EFFECTUEZ UN PING VERS LE CONTAINER SNORT.
 
