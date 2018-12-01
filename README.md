@@ -47,7 +47,7 @@ POUR LA CONFIGURATION AU PREMIER DÉMARRAGE RÉPONDEZ AUX QUESTIONS.
 - 5 - laissez vide (ajouter des commandes perso si vous en avez)
 - 6 - no (n'utilisez pas les alertes email snort)
 
-POUR LA CONFIGURATION DES ALERTES PAR MAIL MODIFIER LE FICHIER /snort/snort-alerte.sh.sh.
+POUR LA CONFIGURATION DES ALERTES PAR MAIL MODIFIER LE FICHIER /snort/snort-alerte.sh
 
 - 1 - EMAILSNORT='snort@snort.com' (email que vous donner a snort)
 - 2 - VOTREMAIL='votremail@mail.com' (email ou sont envoyer les alertes)
