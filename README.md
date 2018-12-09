@@ -43,10 +43,9 @@ POUR LA CONFIGURATION AU PREMIER DÉMARRAGE RÉPONDEZ AUX QUESTIONS.
 - 1 - 1 (pour démarrer snort au boot)
 - 2 - wlan0 eth0 (pour une prise en charge de toutes les interfaces réseaux)
 - 3 - 127.0.0.1 (pour surveiller seulement votre machine)
-- 4 - yes (désactivation de l'écoute sur les autres interfaces réseaux)
+- 4 - no (activation de l'écoute sur les autres interfaces réseaux)
 - 5 - laissez vide (ajouter des commandes perso si vous en avez)
-- 6 - yes (activation d'alerte email snort)
-- 7 - 1 (nombre d'attaque avant alerte email snort)
+- 6 - no (desactivation d'alerte email snort)
 
 POUR TESTER LA CONFIGURATION LANCER LA COMMANDE CI-DESSOUS ET EFFECTUEZ UN PING VERS LE CONTAINER SNORT.
 
