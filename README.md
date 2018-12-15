@@ -38,20 +38,7 @@ docker run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort 
 
 ## CONFIGURATION
 
-POUR LA CONFIGURATION AU PREMIER DÉMARRAGE RÉPONDEZ AUX QUESTIONS.
-
-- 1 - 1 (pour démarrer snort au boot)
-- 2 - wlan0 eth0 (pour une prise en charge de toutes les interfaces réseaux)
-- 3 - 127.0.0.1 (pour surveiller seulement votre machine)
-- 4 - no (activation de l'écoute sur les autres interfaces réseaux)
-- 5 - laissez vide (ajouter des commandes perso si vous en avez)
-- 6 - no (desactivation d'alerte email snort)
-
-POUR TESTER LA CONFIGURATION LANCER LA COMMANDE CI-DESSOUS ET EFFECTUEZ UN PING VERS LE CONTAINER SNORT.
-
-'''
-ping 8.8.8.8
-'''
+LE FICHIER DE CONFIGURATION SE TROUVE DANS VOTRE DOSSIER $HOME/snort
 
 
 ## LICENSE
