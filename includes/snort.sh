@@ -31,7 +31,6 @@ else
   sed -i 's|rule_url=https://www.snort.org/reg-rules|#rule_url=https://www.snort.org/reg-rules|g' /etc/snort/pulledpork.conf && \
   sed -i 's|/usr/local/etc/snort|/etc/snort|g' /etc/snort/pulledpork.conf && \
   sed -i 's|sid_msg_version=1|sid_msg_version=2|g' /etc/snort/pulledpork.conf && \
-  sed -i 's|#rule_url=https://rules.emergingthreats|rule_url=https://rules.emergingthreats|g' /etc/snort/pulledpork.conf && \
   sed -i 's|rule_url=https://rules.emergingthreatspro|#rule_url=https://rules.emergingthreatspro|g' /etc/snort/pulledpork.conf && \
   sed -i 's|distro=FreeBSD-8-1|distro=Debian-9-0|g' /etc/snort/pulledpork.conf && \
   mkdir /etc/snort/rules/iplists && \
