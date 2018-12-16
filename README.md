@@ -20,7 +20,7 @@
 
 ## INTRODUCTION
 
-Ce repository contient le fichier Dockerfile de [Snort](https://www.snort.org/) pour [Docker](https://www.docker.com), mis à jour automatiquement dans le [Docker Hub](https://hub.docker.com/r/alexandreoda/snort/) public.
+Ce repository contient le fichier Dockerfile de [Snort](https://www.snort.org/) avec [PulledPork](https://github.com/shirkdog/pulledpork) pour [Docker](https://www.docker.com), mis à jour automatiquement dans le [Docker Hub](https://hub.docker.com/r/alexandreoda/snort/) public.
 
 
 ## PREREQUIS
@@ -38,7 +38,7 @@ docker run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort 
 
 ## CONFIGURATION
 
-LE FICHIER DE CONFIGURATION SE TROUVE DANS VOTRE DOSSIER $HOME/snort
+LES FICHIERS DE CONFIGURATION SONT DANS VOTRE DOSSIER $HOME/snort
 
 
 ## LICENSE

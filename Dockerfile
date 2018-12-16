@@ -3,7 +3,10 @@ FROM debian:stretch-slim
 MAINTAINER https://oda-alexandre.github.io
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
-curl
+curl \
+git \
+libcrypt-ssleay-perl \
+liblwp-useragent-determined-perl
 
 WORKDIR /root/
 
