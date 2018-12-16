@@ -38,7 +38,7 @@ else
 
 # CONFIGURATION DE PULLEDPORK
   /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l && \
-  sed -i.old -e '572i|include $RULE_PATH/snort.rules' /etc/snort/snort.conf && \
+  sed -i.old -e '572i include $RULE_PATH/snort.rules' /etc/snort/snort.conf && \
 
 # DEMARRAGE DE LA CONFIGURATION DE SNORT
   service snort restart && \
