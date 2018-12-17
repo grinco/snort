@@ -24,8 +24,6 @@ else
   sed -i 's|ipvar EXTERNAL_NET any|#ipvar EXTERNAL_NET any|g' /etc/snort/snort.conf && \
   sed -i 's|#ipvar EXTERNAL_NET !$HOME_NET|ipvar EXTERNAL_NET $HOME_NET|g' /etc/snort/snort.conf && \
   sed -i 's|#include $RULE_PATH|include $RULE_PATH|g' /etc/snort/snort.conf && \
-  sed -i 's|include $RULE_PATH|#include $RULE_PATH|g' /etc/snort/snort.conf && \
-  sed -i 's|#include $RULE_PATH/local.rules|include $RULE_PATH/local.rules|g' /etc/snort/snort.conf && \
 
 # CONFIGURATION DU FICHIER /etc/snort/pulledpork.conf
   sed -i 's|rule_url=https://www.snort.org/reg-rules|#rule_url=https://www.snort.org/reg-rules|g' /etc/snort/pulledpork.conf && \
