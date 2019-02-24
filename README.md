@@ -20,12 +20,12 @@
 
 ## INTRODUCTION
 
-Ce repository contient le fichier Dockerfile de [Snort](https://www.snort.org/) avec [PulledPork](https://github.com/shirkdog/pulledpork) pour [Docker](https://www.docker.com), mis à jour automatiquement dans le [Docker Hub](https://hub.docker.com/r/alexandreoda/snort/) public.
+Ce repository contient le fichier Dockerfile de [Snort](https://www.snort.org/) avec [PulledPork](https://github.com/shirkdog/pulledpork) pour [docker](https://www.docker.com), mis à jour automatiquement dans le [docker hub](https://hub.docker.com/r/alexandreoda/snort/) public.
 
 
 ## PREREQUIS
 
-Installer [Docker](https://www.docker.com)
+Installer [docker](https://www.docker.com)
 
 
 ## INSTALLATION
