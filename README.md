@@ -1,26 +1,33 @@
 # SNORT
 
-![snort](https://raw.githubusercontent.com/oda-alexandre/snort/master/img/logo-snort.png) ![docker](https://raw.githubusercontent.com/oda-alexandre/snort/master/img/logo-docker.png)
+[![dockeri.co](https://dockeri.co/image/alexandreoda/snort)](https://hub.docker.com/r/alexandreoda/snort)
 
 
 ## INDEX
 
-- [Build Docker](#BUILD)
+- [Badges](#BADGES)
 - [Introduction](#INTRODUCTION)
 - [Prerequis](#PREREQUIS)
 - [Installation](#INSTALLATION)
-- [Configuration](#CONFIGURATION)
 - [License](#LICENSE)
 
 
-## BUILD DOCKER
+## BADGES
 
-[![snort docker build](https://img.shields.io/docker/build/alexandreoda/snort.svg)](https://hub.docker.com/r/alexandreoda/snort)
+[![version](https://images.microbadger.com/badges/version/alexandreoda/snort.svg)](https://microbadger.com/images/alexandreoda/snort)
+[![size](https://images.microbadger.com/badges/image/alexandreoda/snort.svg)](https://microbadger.com/images/alexandreoda/snort")
+[![build](https://img.shields.io/docker/build/alexandreoda/snort.svg)](https://hub.docker.com/r/alexandreoda/snort)
+[![automated](https://img.shields.io/docker/automated/alexandreoda/snort.svg)](https://hub.docker.com/r/alexandreoda/snort)
 
 
 ## INTRODUCTION
 
-Ce repository contient le fichier Dockerfile de [Snort](https://www.snort.org/) avec [PulledPork](https://github.com/shirkdog/pulledpork) pour [docker](https://www.docker.com), mis à jour automatiquement dans le [docker hub](https://hub.docker.com/r/alexandreoda/snort/) public.
+Ce repository contient le fichier Dockerfile de
+
+- [snort](https://www.snort.org/)
+- [pulledPork](https://github.com/shirkdog/pulledpork)
+
+Mis à jour automatiquement dans le [docker hub public](https://hub.docker.com/r/alexandreoda/snort/).
 
 
 ## PREREQUIS
@@ -34,11 +41,6 @@ Installer [docker](https://www.docker.com)
 mkdir $HOME/snort
 docker run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib -v ${HOME}/snort:/var/log/snort -v /etc/localtime:/etc/localtime:ro --network host --cap-add=NET_ADMIN --restart=always alexandreoda/snort
 ```
-
-
-## CONFIGURATION
-
-LES FICHIERS DE CONFIGURATION SONT DANS VOTRE DOSSIER $HOME/snort
 
 
 ## LICENSE
