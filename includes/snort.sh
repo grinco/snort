@@ -3,7 +3,7 @@
 # LANCEMENT DE SNORT SI LE FICHIER /etc/snort/snort.conf EXISTE
 if [ -e /etc/snort/snort.conf ]
 then
-  /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l && \
+  sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l && \
   sudo service snort restart && \
   sudo snort -A console -c /etc/snort/snort.conf
 else
@@ -15,9 +15,9 @@ else
 
 # INSTALLATION DE PULLEDPORK POUR LA GESTION AUTOMATISEE DES REGLES SNORT
   git clone https://github.com/shirkdog/pulledpork.git && \
-  cp pulledpork/pulledpork.pl /usr/local/bin && \
-  chmod +x /usr/local/bin/pulledpork.pl && \
-  cp pulledpork/etc/*.conf /etc/snort && \
+  sudo cp pulledpork/pulledpork.pl /usr/local/bin && \
+  sudo chmod +x /usr/local/bin/pulledpork.pl && \
+  sudo cp pulledpork/etc/*.conf /etc/snort && \
   rm -rf pulledpork && \
 
 # CONFIGURATION DU FICHIER /etc/snort/snort.conf
