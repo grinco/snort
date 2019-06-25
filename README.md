@@ -1,6 +1,6 @@
 # SNORT
 
-[![dockeri.co](https://dockeri.co/image/alexandreoda/snort)](https://hub.docker.com/r/alexandreoda/snort)
+<img src="https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/v1480679929/iwzduqxdvnpqxdrmmmn0.png" />
 
 
 ## INDEX
@@ -14,10 +14,7 @@
 
 ## BADGES
 
-[![version](https://images.microbadger.com/badges/version/alexandreoda/snort.svg)](https://microbadger.com/images/alexandreoda/snort)
-[![size](https://images.microbadger.com/badges/image/alexandreoda/snort.svg)](https://microbadger.com/images/alexandreoda/snort")
-[![build](https://img.shields.io/docker/build/alexandreoda/snort.svg)](https://hub.docker.com/r/alexandreoda/snort)
-[![automated](https://img.shields.io/docker/automated/alexandreoda/snort.svg)](https://hub.docker.com/r/alexandreoda/snort)
+[![pipeline status](https://gitlab.com/oda-alexandre/snort/badges/master/pipeline.svg)](https://gitlab.com/oda-alexandre/snort/commits/master)
 
 
 ## INTRODUCTION
