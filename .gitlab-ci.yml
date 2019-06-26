@@ -96,6 +96,6 @@ test:
   allow_failure: false
   script:
     - docker pull $CI_REGISTRY_IMAGE
-    - docker run --rm $CI_REGISTRY_IMAGE apt-get update && apt-get install -y snort && ldconfig && snort --version
+    - docker run --rm $CI_REGISTRY_IMAGE /bin/bash sudo apt-get update && sudo apt-get install -y snort && ldconfig && snort --version
   only:
     - master
