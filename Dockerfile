@@ -1,12 +1,14 @@
+# IMAGE TO USE
 FROM debian:stretch-slim
 
+# MAINTAINER
 MAINTAINER https://www.oda-alexandre.com/
 
 # VARIABLES
 ENV USER snort
 ENV DEBIAN_FRONTEND noninteractive
 
-# INSTALLATION DES PREREQUIS
+# INSTALL PACKAGES
 RUN apt-get update && apt-get install --no-install-recommends -y \
 sudo \
 curl \
@@ -14,23 +16,23 @@ git \
 libcrypt-ssleay-perl \
 liblwp-useragent-determined-perl && \
 
-# AJOUT UTILISATEUR
+# ADD USER
 useradd -d /home/${USER} -m ${USER} && \
 passwd -d ${USER} && \
 adduser ${USER} sudo
 
-# SELECTION UTILISATEUR
+# SELECT USER
 USER ${USER}
 
-# SELECTION ESPACE DE TRAVAIL
+# SELECT WORKING SPACE
 WORKDIR /home/${USER}
 
-# CREATION ESPACE DE TRAVAIL
+# CREATION ESPACE OF TRAVAIL
 RUN mkdir snort
 
-# AJOUT INCLUDES
+# ADD INCLUDES
 COPY ./includes/snort.sh  /home/${USER}/snort.sh
 RUN sudo chmod +x /home/${USER}/snort.sh
 
-# COMMANDE AU DEMARRAGE DU CONTENEUR
-CMD ./snort.sh
+# START THE CONTAINER
+CMD ./snort.sh \
