@@ -1,11 +1,11 @@
 #!/bin/sh
 
-echo -e '\033[36;1m ******* LAUNCH SNORT IF FILE /etc/snort/snort.conf EXISTS ******** \033[0m'
 if [ -e /etc/snort/snort.conf ]
 then
+  echo -e '\033[36;1m ******* LAUNCH SNORT IF FILE /etc/snort/snort.conf EXISTS ******** \033[0m'
   # sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l && \
   sudo service snort restart && \
-  sudo snort -A shell -c /etc/snort/snort.conf
+  sudo snort -A console -c /etc/snort/snort.conf
 else
 
   echo -e '\033[36;1m ******* INSTALL SNORT IF FILE /etc/snort/snort.conf NOT EXISTS ******** \033[0m' && \
