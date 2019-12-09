@@ -28,7 +28,7 @@ RUN echo -e '\033[36;1m ******* CREATE WORKING SPACE ******** \033[0m'; \
 mkdir snort
 
 RUN echo -e '\033[36;1m ******* ADD APP ******** \033[0m'
-COPY ./includes/snort.sh  /home/${USER}/snort.sh
+COPY ./snort.sh  /home/${USER}/snort.sh
 RUN sudo chmod +x /home/${USER}/snort.sh
 
 RUN echo -e '\033[36;1m ******* CONTAINER START COMMAND ******** \033[0m'
