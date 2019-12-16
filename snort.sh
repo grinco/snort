@@ -9,8 +9,8 @@ then
 else
 
   echo -e '\033[36;1m ******* INSTALL SNORT IF FILE /etc/snort/snort.conf NOT EXISTS ******** \033[0m'; \
-  sudo apt update; \
-  sudo apt install -y snort; \
+  sudo apt-get update; \
+  sudo apt-get install -y snort; \
   sudo ldconfig; \
 
   # echo -e '\033[36;1m ******* INSTALL OF PULLEDPORK FOR THE AUTOMATED MANAGEMENT OF THE SNOR RULES ******** \033[0m'; \
