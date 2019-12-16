@@ -4,11 +4,13 @@
 
 ## INDEX
 
-- [Badges](#BADGES)
-- [Introduction](#INTRODUCTION)
-- [Prerequisites](#PREREQUISITESITES)
-- [Install](#INSTALL)
-- [License](#LICENSE)
+- [SNORT](#snort)
+  - [INDEX](#index)
+  - [BADGES](#badges)
+  - [INTRODUCTION](#introduction)
+  - [PREREQUISITES](#prerequisites)
+  - [INSTALL](#install)
+  - [LICENSE](#license)
 
 ## BADGES
 
@@ -37,7 +39,7 @@ Use [docker](https://www.docker.com)
 
 ```mkdir $HOME/snort```
 
-```docker run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib -v ${HOME}/snort:/var/log/snort -v /etc/localtime:/etc/localtime:ro --network host --cap-add=NET_ADMIN --restart=always alexandreoda/snort```
+```docker run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib -v ${HOME}/snort:/var/log/snort -v /etc/localtime:/etc/localtime:ro --network host --cap-add=NET_ADMIN --restart always alexandreoda/snort```
 
 ## LICENSE
 
