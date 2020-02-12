@@ -1,6 +1,6 @@
 # SNORT
 
-<img src="https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/v1480679929/iwzduqxdvnpqxdrmmmn0.png" width="200" height="200"/>
+<img src="https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904480/snort-logo.png" width="200" height="200"/>
 
 ## INDEX
 
