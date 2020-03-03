@@ -12,6 +12,7 @@ else
   sudo apt-get update && \
   sudo apt-get install -y snort && \
   sudo ldconfig && \
+  rm -rf /var/lib/apt/lists/* && \
 
   # echo -e '\033[36;1m ******* INSTALL OF PULLEDPORK FOR THE AUTOMATED MANAGEMENT OF THE SNOR RULES ******** \033[0m' && \
   # git clone https://github.com/shirkdog/pulledpork.git && \
@@ -24,7 +25,6 @@ else
   sed -i 's|ipvar EXTERNAL_NET any|#ipvar EXTERNAL_NET any|g' | sudo tee -a /etc/snort/snort.conf && \
   sed -i 's|#ipvar EXTERNAL_NET !$HOME_NET|ipvar EXTERNAL_NET $HOME_NET|g' | sudo tee -a /etc/snort/snort.conf && \
 
-
   # echo -e '\033[36;1m ******* CONFIG PULLEDPORK ******** \033[0m' && \
   # sed -i 's|rule_url=https://www.snort.org/reg-rules|#rule_url=https://www.snort.org/reg-rules|g' | sudo tee -a /etc/snort/pulledpork.conf && \
   # sed -i 's|/usr/local/etc/snort|/etc/snort|g' | sudo tee -a /etc/snort/pulledpork.conf && \
@@ -36,13 +36,6 @@ else
   # sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l && \
   # sed -i.old -e '572i include $RULE_PATH/snort.rules' | sudo tee -a /etc/snort/snort.conf && \
 
-  echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
-  apt-get --purge autoremove -y && \
-  apt-get autoclean -y && \
-  rm /etc/apt/sources.list && \
-  rm -rf /var/cache/apt/archives/* && \
-  rm -rf /var/lib/apt/lists/*
-  
   echo -e '\033[36;1m ******* START MANUAL CONFIG OF SNORT ******** \033[0m' && \
   sudo service snort restart && \
   sudo dpkg-reconfigure snort
