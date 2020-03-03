@@ -36,6 +36,13 @@ else
   # sudo /usr/local/bin/pulledpork.pl -c /etc/snort/pulledpork.conf -l && \
   # sed -i.old -e '572i include $RULE_PATH/snort.rules' | sudo tee -a /etc/snort/snort.conf && \
 
+  echo -e '\033[36;1m ******* CLEANING ******** \033[0m' && \
+  apt-get --purge autoremove -y && \
+  apt-get autoclean -y && \
+  rm /etc/apt/sources.list && \
+  rm -rf /var/cache/apt/archives/* && \
+  rm -rf /var/lib/apt/lists/*
+  
   echo -e '\033[36;1m ******* START MANUAL CONFIG OF SNORT ******** \033[0m' && \
   sudo service snort restart && \
   sudo dpkg-reconfigure snort
