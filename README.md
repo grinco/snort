@@ -40,7 +40,17 @@ Use [docker](https://www.docker.com)
 ```mkdir ${HOME}/snort```
 
 ```\
-docker  run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib -v ${HOME}/snort:/var/log/snort -v /etc/localtime:/etc/localtime:ro --network host --cap-add=NET_ADMIN --restart unless-stopped alexandreoda/snort
+docker run -it \
+--name snort \
+--restart unless-stopped \
+--network host \
+--cap-add=NET_ADMIN \
+-v ${HOME}/snort:/snort \
+-v ${HOME}/snort:/etc/snort \
+-v ${HOME}/snort:/usr/local/lib \
+-v ${HOME}/snort:/var/log/snort \
+-v /etc/localtime:/etc/localtime:ro \
+alexandreoda/snort
 ```
 
 ### DOCKER COMPOSE
