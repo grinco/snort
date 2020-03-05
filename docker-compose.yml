@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  snort:
+    container_name: snort
+    image: alexandreoda/snort
+    restart: unless-stopped
+    network_mode: host
+    privileged: false
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - "${HOME}/snort:/snort"
+      - "${HOME}/snort:/etc/snort"
+      - "${HOME}/snort:/usr/local/lib"
+      - "${HOME}/snort:/var/log/snort"
+      - "/etc/localtime:/etc/localtime:ro"

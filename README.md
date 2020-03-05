@@ -25,7 +25,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/snort/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/snort/pipelines)
 
 Automatically updated on :
 
@@ -39,7 +39,30 @@ Use [docker](https://www.docker.com)
 
 ```mkdir ${HOME}/snort```
 
-```docker run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib -v ${HOME}/snort:/var/log/snort -v /etc/localtime:/etc/localtime:ro --network host --cap-add=NET_ADMIN --restart always alexandreoda/snort```
+```docker run -it --name snort -v ${HOME}/snort:/snort -v ${HOME}/snort:/etc/snort -v ${HOME}/snort:/usr/local/lib -v ${HOME}/snort:/var/log/snort -v /etc/localtime:/etc/localtime:ro --network host --cap-add=NET_ADMIN --restart unless-stopped alexandreoda/snort
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  snort:
+    container_name: snort
+    image: alexandreoda/snort
+    restart: unless-stopped
+    network_mode: host
+    privileged: false
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - "${HOME}/snort:/snort"
+      - "${HOME}/snort:/etc/snort"
+      - "${HOME}/snort:/usr/local/lib"
+      - "${HOME}/snort:/var/log/snort"
+      - "/etc/localtime:/etc/localtime:ro"
+```
 
 ## LICENSE
 
