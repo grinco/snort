@@ -2,8 +2,6 @@
 
 ![logo](https://assets.gitlab-static.net/uploads/-/system/project/avatar/12904480/snort-logo.png)
 
-## INDEX
-
 - [SNORT](#snort)
   - [INDEX](#index)
   - [BADGES](#badges)
