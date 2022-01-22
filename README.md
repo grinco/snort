@@ -5,14 +5,11 @@
 
 ## INTRODUCTION
 
-Docker image of :
-
-- [snort](https://www.snort.org/)
-- [pulledPork](https://github.com/shirkdog/pulledpork)
+Docker image of [snort](https://www.snort.org/)
 
 Forked from [oda-alexandre/snort](https://github.com/oda-alexandre/snort)
 
-Implements Mikrotik Calea traffic capture via trafr.
+Implements Mikrotik Calea traffic inspection via via trafr.
 
 ## INSTALL
 
