@@ -4,7 +4,7 @@ if [ -e /etc/snort/snort.conf ]
 then
   echo -e '\033[36;1m ******* LAUNCH SNORT IF FILE /etc/snort/snort.conf EXISTS ******** \033[0m'
   #sudo service snort restart; \
-  sudo /home/snort/trafr -s | sudo snort -r - -A console -c /etc/snort/snort.conf
+  sudo /home/snort/trafr -s | sudo snort -r - -A full -c /etc/snort/snort.conf
 else
   echo -e '\033[36;1m ******* CONFIG SNORT ******** \033[0m'; \
   sed -i 's|ipvar EXTERNAL_NET any|#ipvar EXTERNAL_NET any|g' | sudo tee -a /etc/snort/snort.conf-firstboot; \
