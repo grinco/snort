@@ -1,6 +1,6 @@
-FROM debian:stretch-slim
+FROM ubuntu:jammy
 
-LABEL authors https://www.oda-alexandre.com/
+LABEL authors vadim@grinco.eu 
 
 ENV USER snort
 ENV HOME /home/${USER}
